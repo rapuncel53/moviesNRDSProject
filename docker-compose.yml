@@ -1,0 +1,29 @@
+version: "3.9"
+services:
+  mongodb:
+    image: mongo:7
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./mongo_data:/data/db
+
+  redis:
+    image: redis/redis-stack:latest   # 👈 cambia aquí
+    container_name: redis
+    ports:
+      - "6379:6379"
+      - "8001:8001"   # opcional: panel web de Redis Stack
+    volumes:
+      - ./redis_data:/data   # 👈 monta un volumen para no perder datos
+
+  neo4j:
+    image: neo4j:5
+    container_name: neo4j
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    environment:
+      - NEO4J_AUTH=neo4j/test1234
+    volumes:
+      - ./neo4j_data:/data

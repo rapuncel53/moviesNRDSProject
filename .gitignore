@@ -1,0 +1,18 @@
+mongo_data/
+redis_data/
+neo4j_data/
+extra_data/
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
+
+# Ignore VSCode config
+.vscode/
+
+# Ignore environment files
+.env
+venv/
+
+
+.pytest_cache/
