@@ -14,5 +14,6 @@ __pycache__/
 .env
 venv/
 
+movies.json/TMDB_dataset_with_plot.json
 
 .pytest_cache/
